@@ -1,0 +1,21 @@
+<html ng-app="helloWorld">
+  <head>
+    <title>Hello World</title>
+    <script src="./angular-1.2.32/angular.js"></script>
+    <script>
+      //cria o módulo
+      angular.module("helloWorld", []);
+      //preciso criar meu controller e minha view
+      //lembra que tinhamos um scope compartilhado entre view e controller
+      //a view nao é um arquivo é simplesmente um local onde voce colocou o atributo ng-controller
+      //a view nada mais é do que um conjunto de tags
+      //localiza o módulo
+      angular.module("helloWorld").controller("helloWorldCtrl", function($scope){
+        $scope.message = "Hello World";
+      });
+    </script>
+  </head>
+  <body ng-controller="helloWorldCtrl">
+    {{message}}
+  </body>
+</html>
